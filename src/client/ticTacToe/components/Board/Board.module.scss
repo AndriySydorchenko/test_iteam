@@ -1,0 +1,41 @@
+@import "src/shared/styles/scss/shared";
+.board{
+  display: grid;
+  grid-template-columns:  200px 200px 200px;
+  grid-gap: 5px;
+  max-width: 630px;
+  max-height: 630px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 100px;
+  &_line{
+    height: 5px;
+    width: 630px;
+    background-color: #a855c1;
+    border-radius: $border-radius;
+    position: relative;
+
+    &_top{
+      top: -415px;
+      left: -7px;
+    }
+    &_bottom{
+      top: -210px;
+      left: -212px;
+    }
+    &_left{
+      transform: rotate(90deg);
+      left: -522px;
+      top: -315px;
+    }
+    &_right{
+      transform: rotate(90deg);
+      left: 95px;
+      top: -322px;
+    }
+  }
+}
+.winner{
+  @include font-source-sans(25px, $secondary-color);
+  @include flex(start, start);
+}
