@@ -1,0 +1,32 @@
+@import "reset";
+@import 'shared';
+
+.container {
+  max-width: 1024px;
+  min-width: 360px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+.app {
+    &-wraper {
+        //display: flex;
+        //flex-direction: column;
+        //min-height: 100%;
+    }
+}

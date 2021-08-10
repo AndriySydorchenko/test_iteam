@@ -1,0 +1,31 @@
+@import "src/shared/styles/scss/shared";
+.game {
+  background-color: $background-color;
+  padding: 40px;
+  @include flex(center, start);
+  max-width: 1200px;
+
+}
+.wrapperText{
+  @include font-source-sans(25px, $primary-color);
+  @include flex(start, start);
+  flex-direction: column;
+
+}
+.form{
+  @include font-source-sans(25px, $secondary-color);
+  @include flex(start, start);
+  flex-direction: column;
+  &_input{
+    margin-left: 10px;
+    background-color: $background-color;
+    @include font-source-sans(25px, $primary-color);
+    border-radius: $border-radius;
+  }
+  &_btn{
+    margin-top: 20px;
+    background-color: $background-color;
+    @include font-source-sans(25px, $primary-color);
+    border-radius: $border-radius;
+  }
+}

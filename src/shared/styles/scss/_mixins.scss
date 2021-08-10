@@ -1,0 +1,50 @@
+@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+@mixin font-source-sans(
+  $size: false,
+  $colour: false,
+  $weight: false,
+  $height: false
+) {
+  font-family: 'Open Sans', sans-serif;
+  @if $size {
+    font-size: $size;
+  }
+  @if $colour {
+    color: $colour;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $height {
+    line-height: $height;
+  }
+}
+
+@mixin media-query($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+@mixin flex($main-axis: flex-start, $cross-axis: stretch) {
+  display: flex;
+  flex-wrap: wrap;
+
+  @if $main-axis != flex-start {
+    justify-content: $main-axis;
+  }
+  @if $cross-axis != stretch {
+    align-items: $cross-axis;
+  }
+}
+
+
